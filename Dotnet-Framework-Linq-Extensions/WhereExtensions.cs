@@ -22,7 +22,20 @@ namespace Dotnet_Framework_Linq_Extensions
             return iEnumerable.Where(predicate);
         }
         
-       
+        public static IQueryable<T> WhereIfStringIsNotNullOrEmpty<T>(this IQueryable<T> iqQueryable,string value,Func<T,bool> predicate)
+        {
+            if(!string.IsNullOrEmpty(value))
+                return iqQueryable;
+
+            return iqQueryable.Where(predicate).AsQueryable();
+        }
+        public static IEnumerable<T> WhereIfStringIsNotNullOrEmpty<T>(this IEnumerable<T> iEnumerable,string value,Func<T,bool> predicate)
+        {
+            if(string.IsNullOrEmpty(value))
+                return iEnumerable;
+
+            return iEnumerable.Where(predicate);
+        }
         
     }
 }
