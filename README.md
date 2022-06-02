@@ -4,7 +4,7 @@ Additional Extensions Methods for .net framework
 ***WhereIf***
 
 
-` 
+```csharp 
 var list = new List<string>()
             {
                 "Mohamed","Ahmed","Mahmoud","Ali"
@@ -12,4 +12,5 @@ var list = new List<string>()
             
             var result = list.WhereIf(true,name => name[0].Equals('M')).ToList();
             
-            Assert.True(result.Count == 2); `
+            Assert.True(result.Count == 2); 
+```
