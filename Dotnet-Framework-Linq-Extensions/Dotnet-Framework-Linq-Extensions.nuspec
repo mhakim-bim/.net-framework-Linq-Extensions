@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Dotnet-Framework-Linq-Extensions</id>
+    <version>1.0.0</version>
+    <title>Dotnet Framework Linq Extensions</title>
+    <authors>Mohamed Elhakim</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/mhakim-bim/.net-framework-Linq-Extensions/</projectUrl>
+    <description>.net framework package for extending linq methods</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>copyright 2022</copyright>
+    <tags>.net linq whereif</tags>
+  </metadata>
+</package>
