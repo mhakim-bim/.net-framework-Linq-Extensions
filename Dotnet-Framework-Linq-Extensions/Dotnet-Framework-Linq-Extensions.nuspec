@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dotnet-Framework-Linq-Extensions</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Dotnet Framework Linq Extensions</title>
     <authors>Mohamed Elhakim</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -10,8 +10,8 @@
     <!-- <icon>icon.png</icon> -->
     <projectUrl>https://github.com/mhakim-bim/.net-framework-Linq-Extensions/</projectUrl>
     <description>.net framework .net 4.6 or above package for extending linq methods</description>
-    <releaseNotes>Initial Release</releaseNotes>
-    <copyright>copyright 2022</copyright>
+    <releaseNotes>Alpha</releaseNotes>
+    <copyright>Copyright 2022</copyright>
     <tags>.net linq whereif</tags>
   </metadata>
 </package>

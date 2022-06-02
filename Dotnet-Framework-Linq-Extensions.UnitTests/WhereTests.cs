@@ -50,6 +50,34 @@ namespace Dotnet_Framework_Linq_Extensions.UnitTests
             Assert.True(result.Count == 2);
         }
         
+        [Test]
+        public void WhereIfStringIsNotNullOrEmpty_ValueIsEmpty()
+        {
+            var list = new List<string>()
+            {
+                "Mohamed","Ahmed","Mahmoud","Ali"
+            };
+            
+            var result = list
+                .WhereIfStringIsNotNullOrEmpty("",name => name[0].Equals('M'))
+                .ToList();
+            
+            Assert.True(result.Count == 4);
+        }
         
+        [Test]
+        public void WhereIfStringIsNotNullOrEmpty_ValueIsNotEmpty()
+        {
+            var list = new List<string>()
+            {
+                "Mohamed","Ahmed","Mahmoud","Ali"
+            };
+            
+            var result = list
+                .WhereIfStringIsNotNullOrEmpty("ahmed",name => name[0].Equals('M'))
+                .ToList();
+            
+            Assert.True(result.Count == 2);
+        }
     }
 }
