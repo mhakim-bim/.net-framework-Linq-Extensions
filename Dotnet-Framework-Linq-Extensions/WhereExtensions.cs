@@ -24,7 +24,7 @@ namespace Dotnet_Framework_Linq_Extensions
         
         public static IQueryable<T> WhereIfStringIsNotNullOrEmpty<T>(this IQueryable<T> iqQueryable,string value,Func<T,bool> predicate)
         {
-            if(!string.IsNullOrEmpty(value))
+            if(string.IsNullOrEmpty(value))
                 return iqQueryable;
 
             return iqQueryable.Where(predicate).AsQueryable();

@@ -21,6 +21,20 @@ namespace Dotnet_Framework_Linq_Extensions.UnitTests
             Assert.True(result.Count == 2);
         }
         
+        
+        [Test]
+        public void WhereIf_IQueryable_ConditionIsTrue_ExpectedOutput()
+        {
+            var list = new List<string>()
+            {
+                "Mohamed","Ahmed","Mahmoud","Ali"
+            }.AsQueryable();
+            
+            var result = list.WhereIf(true,name => name[0].Equals('M')).ToList();
+            
+            Assert.True(result.Count == 2);
+        }
+        
         [Test]
         public void WhereIf_ConditionIsFalse_ExpectedOutput()
         {
@@ -79,5 +93,36 @@ namespace Dotnet_Framework_Linq_Extensions.UnitTests
             
             Assert.True(result.Count == 2);
         }
+        
+        [Test]
+        public void WhereIfStringIsNotNullOrEmpty_IQueryable_ValueIsEmpty()
+        {
+            var list = new List<string>()
+            {
+                "Mohamed","Ahmed","Mahmoud","Ali"
+            }.AsQueryable();
+            
+            var result = list
+                .WhereIfStringIsNotNullOrEmpty("",name => name[0].Equals('M'))
+                .ToList();
+            
+            Assert.True(result.Count == 4);
+        }
+        
+        [Test]
+        public void WhereIfStringIsNotNullOrEmpty_IQueryable_ValueIsNotEmpty()
+        {
+            var list = new List<string>()
+            {
+                "Mohamed","Ahmed","Mahmoud","Ali"
+            }.AsQueryable();
+            
+            var result = list
+                .WhereIfStringIsNotNullOrEmpty("ahmed",name => name[0].Equals('M'))
+                .ToList();
+            
+            Assert.True(result.Count == 2);
+        }
+        
     }
 }

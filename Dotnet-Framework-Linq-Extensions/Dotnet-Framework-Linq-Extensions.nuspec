@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Dotnet-Framework-Linq-Extensions</id>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <title>Dotnet Framework Linq Extensions</title>
     <authors>Mohamed Elhakim</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -13,5 +13,6 @@
     <releaseNotes>Alpha</releaseNotes>
     <copyright>Copyright 2022</copyright>
     <tags>.net linq whereif</tags>
+	<documentation src="README.md"/>
   </metadata>
 </package>
