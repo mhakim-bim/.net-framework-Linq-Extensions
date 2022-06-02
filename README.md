@@ -2,7 +2,10 @@
 Additional Extensions Methods for .net framework
 
 ***WhereIf***
-` var list = new List<string>()
+
+
+` 
+var list = new List<string>()
             {
                 "Mohamed","Ahmed","Mahmoud","Ali"
             };
