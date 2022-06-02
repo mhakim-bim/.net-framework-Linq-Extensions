@@ -11,6 +11,5 @@ var list = new List<string>()
 };
 
 var result = list.WhereIf(true,name => name[0].Equals('M')).ToList();
-
-Assert.True(result.Count == 2); 
+ 
 ```
